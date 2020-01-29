@@ -1,0 +1,45 @@
+@import '~@microsoft/sp-office-ui-fabric-core/dist/sass/SPFabricCore.scss';
+@import "../../../scss/Index.module.scss";
+
+.Titulo {
+  @include ms-Grid-row;
+
+  &_ColLeft {
+    width: 100%;
+    @include ms-Grid-col;
+    @include ms-md5;
+  }
+
+  &_ColRight {
+    width: 100%;
+    @include ms-Grid-col;
+    @include ms-md7;
+    text-align: right;
+  }
+
+  &_Texto {
+    font-size: 21px;
+    font-weight: bold;
+    padding: 15px 0;
+    color: $ypf-medium-grey;
+  }
+
+  &_ColBottom {
+    width: 100%;
+    @include ms-Grid-col;
+    @include ms-md12;
+
+    &_Line {
+      border-bottom: 1px solid $ypf-ultra-light-blue;
+      margin: 20px 0 30px 0;
+    }
+  }
+
+  :global(.ms-Button) {
+    width: 100%;
+
+    @include ms-screen-lg-up {
+      width: auto;
+    }
+  }
+}

@@ -1,0 +1,150 @@
+@import '~@microsoft/sp-office-ui-fabric-core/dist/sass/SPFabricCore.scss';
+@import "../../../scss/Index.module.scss";
+
+.MenuPrincipal {
+  margin: 0;
+  font-family: 'DIN', Arial, sans-serif;
+
+  :global(.ms-Panel-main) {
+    background-color: $ypf-dark-blue;
+
+    @include ms-screen-lg-up {
+      width: 340px;
+    }
+  }
+
+  :global(.ms-Panel-contentInner) {
+    padding-left: 20px;
+  }
+
+  :global(.ms-Panel-closeButton) {
+    color: white;
+
+    &:hover {
+      color: $ypf-light-grey;
+    }
+  }
+
+  &_GlobalNavContainer {
+    display: inline-block;
+    cursor: pointer;
+
+    @include ms-screen-xl-up {
+      &:hover .MenuPrincipal_GlobalNavContainer_Button {
+        color: $ypf-medium-grey;
+      }
+    }
+
+    &_Button {
+      color: white;
+      font-size: 25px;
+      transition: all 0.3s ease-out;
+
+      @include ms-screen-xl-up {
+        color: black;
+      }
+    }
+  }
+
+  &_MenuContent {
+    list-style: none;
+    list-style-position: inside;
+
+    &_Paginas {
+      padding-top: 15px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid solid rgba(white, 0.1);
+
+      &_Btn {
+        width: 100%;
+        display: block;
+        margin-bottom: 10px;
+        position: relative;
+        transition: all 0.3s ease-out;
+
+        &:hover {
+          background-color: $ypf-ultra-dark-blue;
+        }
+
+        &.Activo::after {
+          content: "";
+          width: 8px;
+          height: 8px;
+          background: red;
+          position: absolute;
+          right: 10px;
+          top: 50%;
+          border-radius: 50%;
+          transform: translate(0, -50%);
+        }
+
+        &_Linkmenu {
+          color: white;
+          font-size: 14px;
+          font-weight: 500;
+          width: 100%;
+          height: 100%;
+          display: block;
+          padding: 13px 8px;
+
+          &_Icon {
+            margin: -4px 25px 0 0;
+            float: left;
+            color: $ypf-light-blue;
+            font-size: 21px;
+          }
+        }
+      }
+    }
+
+    &_Marcas {
+      list-style: none;
+      list-style-position: inside;
+      padding: 25px 0 10px 0;
+      border-bottom: 1px solid rgba(white, 0.1);
+
+      &_Btn {
+        padding: 0 0 18px 10px;
+
+        &_Linkmenu {
+          color: white;
+          font-size: 18px;
+          font-weight: 300;
+
+          &:hover {
+            color: $ypf-light-blue;
+          }
+        }
+      }
+    }
+  }
+}
+
+.Notificaciones {
+  margin: 0;
+
+  :global(.ms-Panel-closeButton) {
+    color: white;
+
+    &:hover {
+      color: $ypf-light-grey;
+    }
+  }
+
+  :global(.ms-Panel-main) {
+    background-color: white;
+
+    @include ms-screen-lg-up {
+      width: 340px;
+    }
+  }
+
+  :global(.ms-Panel-commands) {
+    background-color: $ypf-dark-blue;
+  }
+
+  :global(.ms-Panel-content) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}

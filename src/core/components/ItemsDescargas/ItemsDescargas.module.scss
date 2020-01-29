@@ -1,0 +1,344 @@
+@import '~@microsoft/sp-office-ui-fabric-core/dist/sass/SPFabricCore.scss';
+@import "../../../scss/Index.module.scss";
+
+:global(.ItemDescarga_Caption_Download_Ico) {  
+  font-size: 20px;
+  line-height: 20px;
+  color: $ypf-light-blue;
+  font-weight: 600;
+  transition: all 0.3s ease-out;
+}
+
+:global(.ItemDescarga_Caption_Download_Ico:hover) {  
+  color: $ypf-medium-blue;
+}
+
+////////////////FIN ESTILOS GLOBALES////////////////
+
+.ItemsDescargas {
+  margin-bottom: 30px;
+
+  @include ms-Grid-row;
+}
+
+.ItemDescarga {
+  width: 100%;
+  height: auto;
+  line-height: 45px;
+  margin-bottom: 30px;
+
+  @include ms-Grid-col;
+  @include ms-lg6;
+  @include ms-xl4;
+  @include ms-xxl3;
+
+  &_FigureContent {
+    display: block;
+    position: relative;
+
+    &_Details {
+      width: 100%;
+      height: 66px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      padding: 10px;
+      background: linear-gradient(360deg, rgba(0, 156, 224, 0.0001) 0%, #0063BE 100%);
+
+      &_New {
+        width: 28px;
+        height: 28px;
+        line-height: 28px;
+        display: block;
+        background: $ypf-dark-blue;
+        color: white;
+        font-size: 8px;
+        font-weight: bold;
+        text-transform: uppercase;
+        text-align: center;
+        border-radius: 50%;
+        float: left;
+      }
+
+      &_Peso {
+        float: right;
+        width: 120px;
+        height: 100%;
+        text-align: center;
+        font-weight: 500;
+        font-size: 12px;
+        color: $ypf-dark-grey;
+        position: relative;
+
+        &_Parrafo {
+          float: right;
+          font-size: 10px;
+          line-height: 24px;
+          color: #FFF;
+          font-weight: bold;
+          text-transform: uppercase;
+          text-align: right;
+        }
+
+        &_Barra {
+          width: 1px;
+          height: 15px;
+          background: white;
+          opacity: 0.31;
+          display: inline-block;
+          margin: -3px 5px;
+        }
+      }
+    }
+
+    &_Image {
+      width: 100%;
+      height: 160px;
+      overflow: hidden;
+      display: block;
+
+      &:hover .ItemDescarga_FigureContent_Image_Botones {
+        opacity: 1;
+      }
+
+      &_Botones {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: rgba(0, 99, 190, 0.7) no-repeat center center / auto 30%;
+        opacity: 0;
+        transition: all 0.3s ease-out;
+      }
+
+      &_Fotos {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+      }
+    }
+  }
+
+  &_Caption {
+    padding: 13px 16px;
+    background: white;
+
+    &_New {
+      width: 45px;
+      height: 100%;
+      float: left;
+      text-align: center;
+      background: $ypf-dark-blue;
+      font-weight: bold;
+      font-size: 10px;
+      color: white;
+      display: none;
+    }
+
+    &_Formato {
+      width: 45px;
+      height: 100%;
+      float: left;
+      text-align: center;
+      background: rgba($ypf-light-blue, 0.25);
+      font-weight: bold;
+      font-size: 10px;
+      color: $ypf-light-blue;
+      display: none;
+    }
+
+    &_Title {
+      width: 100%;
+      color: $ypf-medium-grey;
+      font-weight: bold;
+      font-size: 14px;
+      line-height: 1.2;
+      padding: 0;
+      height: auto;
+      float: none;
+      clear: both;
+      text-align: left;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+
+    &_Download {
+      width: 60px;
+      height: 100%;
+      float: right;
+      text-align: center;
+      font-weight: bold;
+      font-size: 10px;
+      padding-top: 8px;
+      position: relative;
+      display: none;
+    }
+
+    &_Peso {
+      float: right;
+      width: 120px;
+      height: 100%;
+      text-align: center;
+      font-weight: 500;
+      font-size: 12px;
+      color: $ypf-dark-grey;
+      position: relative;
+      display: none;
+    }
+
+    &_Fecha {
+      float: right;
+      width: 120px;
+      height: 100%;
+      text-align: center;
+      font-weight: 500;
+      font-size: 12px;
+      color: $ypf-light-blue;
+      position: relative;
+      display: none;
+    }
+
+    &_TagContent {
+      width: 100%;
+      height: auto;
+      line-height: normal;
+      float: none;
+      clear: both;
+      display: block;
+      font-size: 0;
+      text-align: left;
+      margin: 10px 0 0 0;
+      position: relative;
+      list-style: none;
+      padding: 0;
+      list-style-position: inside;
+
+      &_Tag {
+        text-transform: uppercase;
+        height: 18px;
+        line-height: 18px;
+        display: inline-block;
+        color: white;
+        font-size: 10px;
+        font-weight: 500;
+        padding: 0 18px;
+        margin: 0 0 0 10px;
+
+        &:first-of-type {
+          margin: 0;
+        }
+
+        &_DarkGrey {
+          background: $ypf-dark-grey;
+        }
+
+        &_LightBlue {
+          background: $ypf-light-blue;
+        }
+      }
+    }
+  }
+}
+
+.VistaDeLista {
+  @media (min-width: 1024px) {
+
+    .ItemDescarga {
+      height: 45px;
+      margin-bottom: 10px;
+
+      @include ms-Grid-col;
+      @include ms-lg12;
+
+      &_FigureContent {
+        display: none;
+      }
+
+      &_Caption {
+        padding: 0;
+
+        &:after {
+          content: "";
+          display: table;
+          clear: both;
+        }
+
+        &_New {
+          display: block;
+        }
+
+        &_Formato {
+          display: block;
+        }
+
+        &_Title {
+          float: left;
+          width: calc(100% - 680px);
+          height: 100%;
+          padding: 0 10px 0 20px;
+          line-height: inherit;
+          clear: inherit;
+        }
+
+        &_Download {
+          display: block;
+          height: 45px;
+
+          &:before {
+            content: "";
+            width: 1px;
+            height: 15px;
+            float: right;
+            background: rgba(69, 86, 96, 0.3);
+            display: block;
+            position: absolute;
+            top: 50%;
+            left: -1px;
+            transform: translate(0, -50%);
+          }
+        }
+
+        &_Peso {
+          display: block;
+
+          &:before {
+            @extend .ItemDescarga_Caption_Download:before;
+          }
+        }
+
+        &_Fecha {
+          display: block;
+
+          &:before {
+            @extend .ItemDescarga_Caption_Download:before;
+          }
+        }
+
+        &_TagContent {
+          width: 290px;
+          height: 45px;
+          margin: 0;
+          float: right;
+          font-size: 0;
+          clear: inherit;
+
+          &:before {
+            @extend .ItemDescarga_Caption_Download:before;
+          }
+
+          &_Tag {
+            margin: 14px 10px 0 0;
+
+            &:first-of-type {
+              margin: 14px 10px 0 10px;
+            }
+          }
+        }
+      }
+    }
+
+  }
+}

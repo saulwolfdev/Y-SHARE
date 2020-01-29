@@ -1,0 +1,95 @@
+@import '~@microsoft/sp-office-ui-fabric-core/dist/sass/SPFabricCore.scss';
+@import "../../../scss/Index.module.scss";
+
+.MenuSecundario {
+  margin: 0;
+
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  &_Item {
+    margin-right: 20px;
+    float: right;
+
+    &.HiddenLG {
+      @include ms-screen-lg-down {
+        display: none;
+      }
+    }
+
+    &.Activo {
+      position: relative;
+
+      &::after {
+        content: "";
+        width: 5px;
+        height: 5px;
+        background: red;
+        position: absolute;
+        right: -5px;
+        top: 2px;
+        border-radius: 50%;
+      }
+    }
+
+    &_Boton {
+      font-size: 21px;
+      color: white;
+      cursor: pointer;
+      transition: all 0.3s ease-out;
+      padding-top: 2px;
+
+      @include ms-screen-xl-up {
+        color: $ypf-light-grey;
+
+        &:hover {
+          color: $ypf-light-blue;
+        }
+      }
+    }
+
+    &_BotonPrimario {
+      @extend .MenuSecundario_Item_Boton;
+      color: $ypf-medium-blue;
+      display: grid;
+      grid-template-columns: max-content max-content;
+      grid-gap: 6px;
+
+      &_Icono {
+        margin: 0;
+      }
+
+      &_Texto {
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+.CalloutEmpresa {
+  min-width: 160px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+  font-family: 'DIN', Arial, sans-serif;
+
+  &_ContenedorOpciones {
+    padding: 15px 25px;
+
+    &_Opcion {
+      padding: 10px 0;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 25px;
+      cursor: pointer;
+      color: $ypf-light-grey;
+      transition: all 0.3s ease-out;
+
+      &:hover {
+        color: $ypf-medium-blue;
+      }
+    }
+
+  }
+}

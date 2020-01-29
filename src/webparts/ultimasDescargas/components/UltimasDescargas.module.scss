@@ -1,0 +1,17 @@
+@import '~office-ui-fabric-react/dist/sass/References.scss';
+@import "../../../scss/Index.module.scss";
+
+.ultimasDescargas {
+  margin-bottom: 30px;
+
+  &_Container {
+    @include Container;
+  }
+
+  &_FechaDescarga {
+    font-weight: normal;
+    font-size: 14px;
+    color: $ypf-grey;
+    margin-bottom: 15px;
+  }
+}

@@ -1,0 +1,10 @@
+@import '~office-ui-fabric-react/dist/sass/References.scss';
+@import "../../../scss/Index.module.scss";
+
+.zip {
+  margin-bottom: 30px;
+
+  &_Container {
+    @include Container;
+  }
+}

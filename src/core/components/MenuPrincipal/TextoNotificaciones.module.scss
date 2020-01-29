@@ -1,0 +1,75 @@
+@import '~@microsoft/sp-office-ui-fabric-core/dist/sass/SPFabricCore.scss';
+@import "../../../scss/Index.module.scss";
+
+.BodyNotificaciones {
+  margin: 0;
+  font-family: 'DIN', Arial, sans-serif;
+
+  &_Header {
+    background-color: $ypf-dark-blue;
+    padding: 11px 16px 14px 19px;
+
+    &_Titulo {
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 22px;
+      color: #FFFFFF;
+    }
+
+    &_Accion {
+      font-weight: bold;
+      font-size: 12px;
+      line-height: 14px;
+      color: #50ABFF;
+    }
+  }
+
+  &_ContenedorNotificaciones {
+    list-style: none;
+    list-style-position: inside;
+
+    &_Notificacion {
+      height: 138px;
+      border-bottom: 1px solid rgba(151, 151, 151, 0.2);
+      padding: 11px 16px 14px 19px;
+      position: relative;
+
+      &_Titulo {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 17px;
+        color: #252525;
+      }
+
+      &_Fecha {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 10px;
+        line-height: 12px;
+        color: #8C8C8C;
+        margin: 10px 0px;
+      }
+
+      &_DescripcionCorta {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 18px;
+        color: #525252;
+        margin: 0 0 5px;
+      }
+
+      &_Link {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 14px;
+        color: #50ABFF;
+        border: none;
+        background: none;
+      }
+    }
+  }
+
+}

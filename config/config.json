@@ -1,0 +1,63 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "home-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/home/HomeWebPart.js",
+          "manifest": "./src/webparts/home/HomeWebPart.manifest.json"
+        }
+      ]
+    },
+    "marcas-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/marcas/MarcasWebPart.js",
+          "manifest": "./src/webparts/marcas/MarcasWebPart.manifest.json"
+        }
+      ]
+    },
+    "ultimas-descargas-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/ultimasDescargas/UltimasDescargasWebPart.js",
+          "manifest": "./src/webparts/ultimasDescargas/UltimasDescargasWebPart.manifest.json"
+        }
+      ]
+    },
+    "zip-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/zip/ZipWebPart.js",
+          "manifest": "./src/webparts/zip/ZipWebPart.manifest.json"
+        }
+      ]
+    },
+    "perfil-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/perfil/PerfilWebPart.js",
+          "manifest": "./src/webparts/perfil/PerfilWebPart.manifest.json"
+        }
+      ]
+    },
+    "buscador-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/buscador/BuscadorWebPart.js",
+          "manifest": "./src/webparts/buscador/BuscadorWebPart.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "HomeWebPartStrings": "lib/webparts/home/loc/{locale}.js",
+    "MarcasWebPartStrings": "lib/webparts/marcas/loc/{locale}.js",
+    "UltimasDescargasWebPartStrings": "lib/webparts/ultimasDescargas/loc/{locale}.js",
+    "ZipWebPartStrings": "lib/webparts/zip/loc/{locale}.js",
+    "PerfilWebPartStrings": "lib/webparts/perfil/loc/{locale}.js",
+    "BuscadorWebPartStrings": "lib/webparts/buscador/loc/{locale}.js"
+  }
+}

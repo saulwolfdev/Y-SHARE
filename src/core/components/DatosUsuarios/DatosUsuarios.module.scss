@@ -1,0 +1,192 @@
+@import '~@microsoft/sp-office-ui-fabric-core/dist/sass/SPFabricCore.scss';
+@import "../../../scss/Index.module.scss";
+
+.DatosUsuarios {
+
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        list-style-position: inside;
+    }
+
+    li {
+        list-style: none;
+        list-style-position: inside;
+    }
+
+    &_Usuario {
+        width: 100%;
+        height: 45px;
+        line-height: 45px;
+        margin-bottom: 10px;
+        background: white;
+        transition: all 0.3s ease-out;
+
+        @include ms-screen-lg-down {
+            height: 127px;
+            position: relative;
+            padding: 0 20px;
+        }
+
+        &_Name {
+            float: left;
+            width: calc(100% - 680px);
+            height: 100%;
+            text-align: left;
+            font-weight: bold;
+            color: $ypf-medium-grey;
+            padding: 0 10px 0 20px;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+
+            @include ms-screen-lg-down {
+                height: 63px;
+                width: calc(100% - 115px);
+                padding: 8px 10px 0 0;
+            }
+        }
+
+        &_Acciones {
+            float: right;
+            width: 115px;
+            height: 100%;
+            position: relative;
+            &::before {
+                content: "";
+                width: 1px;
+                height: 15px;
+                float: right;
+                background: rgba($ypf-medium-grey, 0.3);
+                display: block;
+                position: absolute;
+                top: 50%;
+                left: -1px;
+                transform: translate(0, -50%);
+            }
+
+            @include ms-screen-lg-down {
+                height: 63px;
+                width: 100px;
+                &::before {
+                    display: none;
+                }
+            }
+
+            &_Icon {
+                float: left;
+                height: 100%;
+                width: 57px;
+                text-align: center;
+
+                @include ms-screen-lg-down {
+                    width: 50px;
+                    padding-top: 8px;
+                }
+
+                &_Trash,
+                &_Edit {
+                    width: 100%;
+                    height: 100%;
+                    display: block;
+                    font-size: 22px;
+                }
+
+                &_Trash {
+                    color: $ypf-light-grey;
+
+                    &:hover {
+                        color: $ypf-medium-grey;
+                    }
+                }
+
+                &_Edit {
+                    color: $ypf-medium-blue;
+
+                    &:hover {
+                        color: $ypf-light-blue;
+                    }
+                }
+            }
+        }
+
+        &_Linea {
+            display: none;
+            width: 100%;
+            height: 1px;
+            background: rgba($ypf-medium-grey, 0.3);
+
+            @include ms-screen-lg-down {
+                position: static;
+                display: table;
+            }
+        }
+
+        &_Mail {
+            float: left;
+            width: 330px;
+            text-align: left;
+            padding: 0 10px 0 20px;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+
+            @include ms-screen-lg-down {
+                padding: 0 10px 0 0;
+                width: 60%;
+            }
+
+            &_Icon {
+                float: left;
+                margin-right: 10px;
+                font-size: 19px;
+                color: $ypf-light-grey;
+
+                @include ms-screen-lg-down {
+                    margin-top: 9px;
+                }
+            }
+
+            &_Text {
+                text-align: left;
+                font-size: 14px;
+                line-height: 44px;
+                color: $ypf-medium-grey;
+
+                @include ms-screen-lg-down {
+                    line-height: 63px;
+                }
+            }
+        }
+
+        &_Pass {
+            float: left;
+            width: 235px;
+            text-align: left;
+            padding: 0 10px 0 20px;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+
+            @include ms-screen-lg-down {
+                padding: 0;
+                width: 40%;
+            }
+
+            &_Icon {
+                @extend .DatosUsuarios_Usuario_Mail_Icon;
+
+                @include ms-screen-lg-down {
+                    margin-top: 9px;
+                }
+            }
+
+            &_Text {
+                @extend .DatosUsuarios_Usuario_Mail_Text;
+            }
+        }
+
+    }
+
+}

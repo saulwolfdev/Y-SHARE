@@ -1,0 +1,78 @@
+@import '~@microsoft/sp-office-ui-fabric-core/dist/sass/SPFabricCore.scss';
+@import "../../../scss/Index.module.scss";
+
+.EditarPerfil {
+  padding: 0;
+
+  &_Dialog {
+    margin: 0;
+
+    &_Contenido {
+      text-align: center;
+
+      &_Titulo {
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 22px;
+        margin-bottom: 30px;
+      }
+    }
+
+    :global(.ms-Dialog-main) {
+      max-width: inherit;
+      box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 60px 0px;
+      width: 100%;
+      font-family: 'DIN', Arial, sans-serif !important;
+
+      @include ms-screen-lg-up {
+        width: 420px;
+      }
+
+      @include ms-screen-xl-up {
+        width: 635px;
+      }
+    }
+
+    :global(.ms-Dialog-title) {
+      padding: 0;
+    }
+
+    :global(.ms-Dialog-button) {
+      z-index: 10;
+    }
+
+    :global(.ms-Dialog-inner) {
+      padding: 40px 20px;
+
+      @include ms-screen-xl-up {
+        padding: 50px 120px 30px;
+      }
+    }
+
+    :global(.ms-TextField) {
+      margin-bottom: 10px;
+    }
+
+    :global(.ms-TextField-fieldGroup .ms-TextField-field) {
+      font-size: 18px;
+      font-weight: 500;
+    }
+
+    :global(.ms-TextField-wrapper .ms-TextField-fieldGroup),
+    :global(.ms-TextField.is-active .ms-TextField-fieldGroup),
+    :global(.ms-TextField:hover .ms-TextField-wrapper .ms-TextField-fieldGroup) {
+      padding: 13px 0px;
+      border-width: 0 0 1px 0;
+    }
+
+    :global(.ms-Checkbox-label) {
+      margin-top: 10px;
+      font-family: 'DIN', Arial, sans-serif !important;
+    }
+
+    :global(.ms-Button--primary) {
+      margin-top: 45px;
+    }
+
+  }
+}

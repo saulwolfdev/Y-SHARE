@@ -1,0 +1,35 @@
+@import '~@microsoft/sp-office-ui-fabric-core/dist/sass/SPFabricCore.scss';
+@import "../../../scss/Index.module.scss";
+
+.FormInputText {
+    width: "100%";
+
+    &:hover {
+        :global(.ms-TextField-fieldGroup) {
+            border: 1px solid $ypf-medium-blue;
+        }
+    }
+
+    &:global(.is-active .ms-TextField-fieldGroup) {
+        border: 1px solid $ypf-medium-blue;
+    }
+
+    :global(.ms-TextField-fieldGroup) {
+        height: 55px;
+        padding: 13px 20px;
+        border: 1px solid $ypf-light-blue;
+        background: transparent;
+        transition: all 0.3s ease-out;
+    }
+
+    :global(.ms-TextField-field) {
+        font-size: 16px;
+        color: $ypf-medium-grey;
+        font-family: 'DIN', Arial, sans-serif;
+        padding: 0;
+
+        &::placeholder {
+            color: $ypf-light-grey;
+        }
+    }
+}

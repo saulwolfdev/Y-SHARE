@@ -1,0 +1,51 @@
+@import '~@microsoft/sp-office-ui-fabric-core/dist/sass/SPFabricCore.scss';
+@import "../../../scss/Index.module.scss";
+
+.FormSelect {
+    width: "100%";
+
+    &:hover,
+    &:active,
+    &:focus {
+        :global(.ms-Dropdown-title) {
+            border: 1px solid $ypf-medium-blue;
+        }
+
+        :global(.ms-Dropdown-caretDownWrapper i) {
+            color: $ypf-medium-blue;
+        }
+    }
+
+    :global(.ms-Dropdown-title) {
+        font-size: 16px;
+        height: 55px;
+        padding: 13px 20px;
+        color: $ypf-medium-grey;
+        border: 1px solid $ypf-light-blue;
+        font-family: 'DIN', Arial, sans-serif;
+        background: transparent;
+        transition: all 0.3s ease-out;
+    }
+
+    :global(.ms-Dropdown-caretDownWrapper) {
+        height: 54px;
+        right: 17px;
+    }
+
+    :global(.ms-Dropdown-caretDownWrapper i) {
+        color: $ypf-light-blue;
+        font-weight: 600;
+        font-size: 13px;
+        padding: 12px 0;
+    }
+
+    &:global(.is-disabled) {
+        :global(.ms-Dropdown-title) {
+            border: 1px solid $ypf-ultra-light-grey;
+            background: $ypf-ultra-light-grey;
+        }
+        :global(.ms-Dropdown-caretDownWrapper i) {
+            color: $ypf-medium-grey;
+        }
+    }
+}

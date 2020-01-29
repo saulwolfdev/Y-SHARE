@@ -1,0 +1,39 @@
+@import '~@microsoft/sp-office-ui-fabric-core/dist/sass/SPFabricCore.scss';
+@import "../../../scss/Index.module.scss";
+
+.Tags {
+  margin: 0;
+
+  &_ContenedorDescripcion {
+    margin: 0;
+
+    &_TagContent {
+      margin: 0;
+
+      &_Tag {
+        width: auto;
+        display: inline-block;
+        height: 18px;
+        line-height: 18px;
+        color: #FFF;
+        font-size: 10px;
+        font-weight: 500;
+        padding: 0 18px;
+        margin-right: 5px;
+        margin-bottom: 5px;
+        list-style: none;
+        list-style-position: inside;
+
+        @include ms-screen-xl-up {
+          display: table;
+        }
+      }
+
+    }
+  }
+
+}
+
+.LightBlue {
+  background-color: $ypf-light-blue;
+}

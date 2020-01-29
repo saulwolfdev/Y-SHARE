@@ -1,0 +1,32 @@
+@import '~@microsoft/sp-office-ui-fabric-core/dist/sass/SPFabricCore.scss';
+@import "../../../scss/Index.module.scss";
+
+.Menu {
+  padding: 15px;
+  margin-bottom: 30px;
+  background-color: $ypf-medium-blue;
+
+  @include ms-screen-xl-up {
+    padding: 35px 45px 40px;
+    background-color: inherit;
+  }
+
+  @include ms-screen-xxl-up {
+    padding: 35px 78px 40px;
+  }
+
+  &_Row {
+    @include ms-Grid-row;
+
+    &_ColLeft {
+      @include ms-Grid-col;
+      @include ms-sm2;
+    }
+
+    &_ColRight {
+      @include ms-Grid-col;
+      @include ms-sm10;
+    }
+  }
+
+}

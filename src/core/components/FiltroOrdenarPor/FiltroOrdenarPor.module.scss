@@ -1,0 +1,49 @@
+@import '~@microsoft/sp-office-ui-fabric-core/dist/sass/SPFabricCore.scss';
+@import "../../../scss/Index.module.scss";
+
+.FiltroOrdenarPor {
+  margin: 0;
+
+  &_Button {
+    display: inline-block;
+  }
+
+  &_Callout {
+    min-width: 160px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+    font-family: 'DIN', Arial, sans-serif;
+  }
+
+  &_ContenedorOpciones {
+    width: 210px;
+
+    &_Titulo {
+      background-color: $ypf-medium-blue;
+      padding: 20px;
+      color: white;
+      font-size: 14px;
+      font-weight: 500;
+    }
+
+    &_Opciones {
+      :global(.ms-ChoiceFieldGroup-flexContainer) {
+        padding: 0 20px;
+      }
+      :global(.ms-ChoiceField) {
+        margin: 0;
+        padding: 20px 0;
+      }
+      :global(.ms-ChoiceField:first-of-type) {
+        border-bottom: 1px solid $ypf-ultra-light-grey;
+      }
+      :global(.ms-ChoiceFieldLabel) {
+        font-size: 16px;
+        font-weight: 500;
+        color: $ypf-light-grey;
+        font-family: 'DIN', Arial, sans-serif;
+        transition: all 0.3s ease-out;
+      }
+    }
+  }
+
+}

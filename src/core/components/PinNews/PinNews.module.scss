@@ -1,0 +1,49 @@
+@import '~@microsoft/sp-office-ui-fabric-core/dist/sass/SPFabricCore.scss';
+@import "../../../scss/Index.module.scss";
+
+.ItemsDescargas {
+  margin-bottom: 30px;
+
+  @include ms-Grid-row;
+}
+
+.ItemDescarga {
+  width: 100%;
+  height: auto;
+  line-height: 45px;
+  margin-bottom: 30px;
+  @include ms-Grid-col;
+  @include ms-lg12;
+  @include ms-xl12;
+  @include ms-xxl12;
+  &_FigureContent {
+    display: block;
+    position: relative;
+
+    &_Details {
+      width: 100%;
+      height: 66px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      padding: 10px;
+      background: linear-gradient(360deg, rgba(0, 156, 224, 0.0001) 0%, #0063BE 100%);
+
+      &_New {
+        width: 28px;
+        height: 28px;
+        line-height: 28px;
+        display: block;
+        background: $ypf-dark-blue;
+        color: white;
+        font-size: 8px;
+        font-weight: bold;
+        text-transform: uppercase;
+        text-align: center;
+        border-radius: 50%;
+        float: left;
+      }
+    }
+  }
+
+}

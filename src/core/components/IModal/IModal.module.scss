@@ -1,0 +1,138 @@
+@import '~@microsoft/sp-office-ui-fabric-core/dist/sass/SPFabricCore.scss';
+@import "../../../scss/Index.module.scss";
+
+.IModal {
+  @include ms-Grid-row;
+  font-family: 'DIN', Arial, sans-serif;
+
+  &_ContenedorImagen {
+    @include ms-Grid-col;
+    @include ms-xl8;
+    background-size: cover;
+    height: 270px;
+    width: 100%;
+
+    @include ms-screen-xl-up {
+      height: 500px;
+    }
+
+  }
+
+  &_ContenedorDescripcion {
+    @include ms-Grid-col;
+    @include ms-xl4;
+    height: auto;
+    padding: 20px;
+    width: 100%;
+
+    @include ms-screen-xl-up {
+      height: 500px;
+      padding: 40px 20px 20px;
+    }
+
+    &_NombreArchivo {
+      font-weight: bold;
+      font-size: 16px;
+      line-height: 22px;
+      color: $ypf-medium-grey;
+    }
+
+    &_TagContent {
+      width: 100%;
+      margin-top: 10px;
+      padding-bottom: 15px;
+      border-bottom: 1px solid $ypf-ultra-light-grey;
+      list-style: none;
+      list-style-position: inside;
+      height: auto;
+      overflow-y: inherit;
+
+      @include ms-screen-xl-up {
+        margin-top: 20px;
+        padding-bottom: 30px;
+        height: 175px;
+        overflow-y: auto;
+      }
+
+      &_Tag {
+        width: auto;
+        display: inline-block;
+        height: 18px;
+        line-height: 18px;
+        color: #FFF;
+        font-size: 10px;
+        font-weight: 500;
+        padding: 0 18px;
+        margin-right: 5px;
+        margin-bottom: 5px;
+        list-style: none;
+        list-style-position: inside;
+
+        @include ms-screen-xl-up {
+          display: table;
+        }
+
+        &_LightBlue {
+          @extend .IModal_ContenedorDescripcion_TagContent_Tag;
+          background-color: $ypf-light-blue;
+        }
+      }
+
+    }
+
+    &_Info {
+      @include ms-Grid-col;
+      @include ms-md12;
+      @include ms-lg6;
+      margin: 15px 0;
+
+      @include ms-screen-xl-up {
+        margin: 30px 0 0 0;
+      }
+
+      &_Titulo {
+        font-weight: 500;
+        font-size: 10px;
+        color: $ypf-medium-grey;
+      }
+
+      &_Texto {
+        font-weight: 500;
+        font-size: 14px;
+        color: $ypf-medium-blue;
+        margin-top: 10px;
+      }
+    }
+
+    &_Botones {
+      position: inherit;
+      width: 100%;
+      bottom: inherit;
+
+      @include ms-screen-xl-up {
+        position: absolute;
+        width: calc(100% - 40px);
+        bottom: 20px;
+      }
+    }
+  }
+
+  &_Row {
+    @include ms-Grid-row;
+  }
+
+  :global(.ms-Button) {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+}
+
+.MediumBlue {
+  background-color: $ypf-dark-blue;
+  text-transform: uppercase;
+}
+
+.LightBlue {
+  background-color: $ypf-light-blue;
+}

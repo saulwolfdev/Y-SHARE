@@ -1,0 +1,133 @@
+@import '~@microsoft/sp-office-ui-fabric-core/dist/sass/SPFabricCore.scss';
+@import "../../../scss/Index.module.scss";
+
+.Footer {
+  width: 100%;
+  position: relative;
+  background: $ypf-dark-grey;
+  padding: 45px 0;
+  margin-top: 70px;
+  min-height: 360px;
+
+  &_Container {
+    @include Container;
+
+    &_Row {
+      @include ms-Grid-row;
+
+      &_Left {
+        @include ms-Grid-col;
+        @include ms-lg7;
+
+        &_Copy {
+          font-size: 11px;
+          color: $ypf-grey;
+          font-weight: 500;
+          opacity: 0.5;
+          line-height: 2;
+          margin-bottom: 40px;
+
+          &_Spacer {
+            margin: 0 5px;
+          }
+
+          &_Link {
+            color: $ypf-grey;
+          }
+        }
+      }
+
+      &_Right {
+        @include ms-Grid-col;
+        @include ms-lg5;
+
+        &_Logo {
+          width: 122px;
+          height: 31px;
+          display: block;
+          margin-bottom: 40px;
+          background-color: transparent;
+          background-size: 100% 100%;
+        }
+
+        &_Redes {
+          margin: 0;
+
+          &_Titulo {
+            display: block;
+            line-height: 17px;
+            font-weight: 500;
+            font-size: 14px;
+            color: #FFF;
+            margin-bottom: 20px;
+          }
+
+          &_Accordion {
+            margin: 0;
+
+            &_Item {
+              margin: 0;
+
+              &.Closed {
+                .Footer_Container_Row_Right_Redes_Accordion_Item_Title_Ico {
+                  transform: rotate(0);
+                }
+
+                .Footer_Container_Row_Right_Redes_Accordion_Item_Content {
+                  max-height: 0;
+                  transition: all 0.4s ease;
+                }
+              }
+
+              &_Title {
+                color: $ypf-grey;
+                margin-bottom: 15px;
+                display: inline-block;
+                cursor: pointer;
+
+                &_Text {
+                  display: inline-block;
+                  font-size: 14px;
+                  font-weight: 500;
+                  margin-right: 20px;
+                }
+
+                &_Ico {
+                  display: inline-block;
+                  font-size: 12px;
+                  font-weight: 600;
+                  transform: rotate(90deg);
+                  transition: all 0.3s ease-out;
+                }
+              }
+
+              &_Content {
+                max-height: 700px;
+                overflow: hidden;
+                transition: all 0.4s ease;
+
+                &_SocialNetwork {
+                  display: inline-block;
+                  margin: 0 8px 15px 0;
+
+                  &:hover .SVGCircle {
+                    fill: $ypf-grey;
+                    transition: all 0.3s ease-out;
+                  }
+
+                  &:hover .SVGlogo {
+                    fill: white;
+                    transition: all 0.3s ease-out;
+                  }
+                }
+
+              }
+            }
+
+          }
+
+        }
+      }
+    }
+  }
+}

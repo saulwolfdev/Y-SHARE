@@ -1,0 +1,105 @@
+@import '~@microsoft/sp-office-ui-fabric-core/dist/sass/SPFabricCore.scss';
+@import "../../../scss/Index.module.scss";
+
+.FormButton {
+  margin: 0;
+
+  &_Primary {
+    height: 55px;
+    font-size: 16px;
+    padding: 0;
+    min-width: inherit;
+    color: #FFF;
+    background-color: $ypf-medium-blue;
+
+    :global(.ms-Button-flexContainer) {
+      padding: 0 50px;
+    }
+
+    &:hover {
+      background-color: $ypf-light-blue;
+    }
+  }
+
+  &_PrimaryNbackground {
+    height: 55px;
+    font-size: 16px;
+    padding: 0;
+    min-width: inherit;
+    border: 1px solid $ypf-medium-blue;
+    color: $ypf-medium-blue;
+    background-color: transparent;
+
+    :global(.ms-Button-flexContainer) {
+      padding: 0 50px;
+    }
+
+    &:hover {
+      background-color: $ypf-medium-blue;
+      color: white;
+    }
+  }
+
+  &_Default {
+    height: 55px;
+    font-size: 16px;
+    padding: 0;
+    min-width: inherit;
+    border: 1px solid $ypf-light-blue;
+    color: $ypf-light-blue;
+    background-color: transparent;
+
+    :global(.ms-Button-flexContainer) {
+      padding: 0 50px;
+    }
+
+    &:hover {
+      color: white;
+      background-color: $ypf-light-blue;
+    }
+  }
+
+  &_DefaultButtonHomeSmall {
+    width: 140px;
+    font-size: 14px;
+    padding: 17px 0;
+    min-width: inherit;
+    color: $ypf-ultra-light-grey;
+    border: 2px solid rgba(white, 0.2);
+    background-color: transparent;
+
+    &:hover {
+      color: $ypf-ultra-light-grey;
+      border: 2px solid rgba(white, 0.5);
+      background-color: transparent;
+    }
+  }
+
+  &_Icon {
+    height: 55px;
+
+    :global(.ms-Button-flexContainer) {
+      padding: 0 50px 0 65px;
+    }
+
+    :global(.ms-Button-icon) {
+      font-size: 20px;
+      position: absolute;
+      left: 10px;
+    }
+  }
+
+  &_IconOnly {
+    height: 55px;
+
+    :global(.ms-Button-flexContainer) {
+      padding: 0 14px;
+    }
+
+    :global(.ms-Button-icon) {
+      font-size: 20px;
+      font-weight: 600;
+    }
+  }
+
+}

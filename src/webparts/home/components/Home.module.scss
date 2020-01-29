@@ -1,0 +1,12 @@
+@import '~office-ui-fabric-react/dist/sass/References.scss';
+@import '~@microsoft/sp-office-ui-fabric-core/dist/sass/SPFabricCore.scss';
+@import "../../../scss/Index.module.scss";
+
+
+.Home {
+  margin-bottom: 30px;
+
+  &_Container {
+    @include Container;
+  }
+}

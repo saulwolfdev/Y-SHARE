@@ -1,0 +1,16 @@
+@import '~@microsoft/sp-office-ui-fabric-core/dist/sass/SPFabricCore.scss';
+@import "../../../scss/Index.module.scss";
+.UltimasDescargas {
+  margin-bottom: 30px;
+//   @include ms-Grid-row;
+
+  &_Titulo {
+    font-size: 21px;
+    font-weight: bold;
+    padding: 25px 0;
+    color: $ypf-medium-grey;
+    // @include ms-Grid-col;
+    // @include ms-sm12;
+  }
+
+}

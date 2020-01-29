@@ -1,0 +1,105 @@
+@import '~@microsoft/sp-office-ui-fabric-core/dist/sass/SPFabricCore.scss';
+@import "../../../scss/Index.module.scss";
+
+.Buscador {
+  margin: 0;
+
+  &_Titulo {
+    font-size: 21px;
+    font-weight: bold;
+    padding: 15px 0 50px;
+    color: $ypf-medium-grey;
+  }
+
+  &_Bottom {
+    border-bottom: 1px solid $ypf-ultra-light-blue;
+    margin: 40px 0 20px 0;
+  }
+
+  &_RowBuscar {
+    @include ms-Grid-row;
+    margin-bottom: 16px;
+
+    &_ColLeft {
+      @include ms-Grid-col;
+      @include ms-sm9;
+      @include ms-xxl10;
+    }
+
+    &_ColRight {
+      @include ms-Grid-col;
+      @include ms-sm3;
+      @include ms-xxl2;
+
+      :global(.ms-Button) {
+        width: 100%;
+      }
+
+      @include ms-screen-md-down {
+        :global(.ms-Button-icon) {
+          left: inherit;
+        }
+        
+        :global(.ms-Button-flexContainer) {
+          padding: 0;
+        }
+
+        :global(.ms-Button-textContainer) {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &_RowFiltros {
+    margin: 0;
+    @include ms-Grid-row;
+
+    &_ColLeft {
+      @include ms-Grid-col;
+      @include ms-sm12;
+      @include ms-xl7;
+      padding: 0;
+
+      &_ColMarcas,
+      &_ColCategorias,
+      &_ColSubCategorias {
+        @include ms-Grid-col;
+        @include ms-sm12;
+        @include ms-lg4;
+        margin-bottom: 16px;
+
+        @include ms-screen-xl-up {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    &_ColRight {
+      @include ms-Grid-col;
+      @include ms-sm12;
+      @include ms-xl5;
+      padding: 0;
+
+      &_ColTexto {
+        @include ms-Grid-col;
+        @include ms-sm4;
+        font-size: 18px;
+        line-height: 55px;
+        font-weight: 500;
+        color: #8C8C8C;
+        display: inline-block;
+        padding-right: 35px;
+
+        @include ms-screen-xl-up {
+          text-align: right;
+        }
+      }
+
+      &_ColSelect {
+        @include ms-Grid-col;
+        @include ms-sm8;
+      }
+    }
+  }
+}
